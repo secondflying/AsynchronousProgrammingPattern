@@ -37,6 +37,9 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -60,9 +63,9 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(89, 270);
+            this.richTextBox1.Location = new System.Drawing.Point(535, 27);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(350, 263);
+            this.richTextBox1.Size = new System.Drawing.Size(296, 566);
             this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "";
             // 
@@ -99,38 +102,72 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.progressBar1);
+            this.groupBox2.Controls.Add(this.button6);
+            this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Location = new System.Drawing.Point(34, 140);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(495, 71);
+            this.groupBox2.Size = new System.Drawing.Size(495, 219);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "APM";
+            this.groupBox2.Text = "EAP";
             // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(17, 30);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(209, 23);
+            this.button3.Size = new System.Drawing.Size(256, 23);
             this.button3.TabIndex = 0;
-            this.button3.Text = "使用WebRequest内置的异步方法";
+            this.button3.Text = "使用WebClient内置的异步方法";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(244, 30);
+            this.button4.Location = new System.Drawing.Point(298, 30);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(230, 23);
+            this.button4.Size = new System.Drawing.Size(176, 23);
             this.button4.TabIndex = 0;
-            this.button4.Text = "将同步方法封装为Delegate后异步调用";
+            this.button4.Text = "取消";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(17, 190);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(457, 23);
+            this.progressBar1.TabIndex = 1;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(298, 74);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(176, 23);
+            this.button5.TabIndex = 0;
+            this.button5.Text = "取消";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(17, 74);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(256, 23);
+            this.button6.TabIndex = 0;
+            this.button6.Text = "使用BackgroundWorker封装WebRequest";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(608, 588);
+            this.ClientSize = new System.Drawing.Size(843, 605);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.richTextBox1);
@@ -156,6 +193,9 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
     }
 }
 
